@@ -73,3 +73,5 @@ WRITEABLE (W)	    数据区域可以被写入，将该值设置为 False，则�
 ALIGNED (A)	        数据和所有元素都适当地对齐到硬件上
 UPDATEIFCOPY (U)	这个数组是其它数组的一个副本，当这个数组被释放时，原数组的内容将被更新
 """
+z = np.array([1, 2, 3, 4, 5, 6])
+print("z.flags:\n", z.flags)
