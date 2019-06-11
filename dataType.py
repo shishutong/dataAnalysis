@@ -70,7 +70,7 @@ print("dt: ", dt)
 a = np.array([('abc', 21, 50), ('xyz', 18, 75)], dtype=dt)
 print("a: ", a)
 print("a[name]: ", a['name'])
-
+# print("a.itemsize: ", a.itemsize)
 
 """
 每个内建类型都有一个唯一定义它的字符代码，如下：
