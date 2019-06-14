@@ -111,6 +111,24 @@ f_index	        可以跟踪 Fortran 顺序的索引
 multi-index	    每次迭代可以跟踪一种索引类型
 external_loop	给出的值是具有多个值的一维数组，而不是零维数组
 """
+a = np.arange(0,60,5)
+a = a.reshape(3,4)
+print('原始数组是：')
+print(a)
+print('\n')
+print('修改后的数组是：')
+for x in np.nditer(a, flags=['external_loop'], order='F'):
+   print(x, end=", ")
+
+
+"""
+广播迭代
+如果两个数组是可广播的，nditer 组合对象能够同时迭代它们。 
+假设数组 a 的维度为 3X4，数组 b 的维度为 1X4 ，
+则使用以下迭代器（数组 b 被广播到 a 的大小）。
+"""
+
+
 
 
 
