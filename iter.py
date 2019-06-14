@@ -127,9 +127,14 @@ for x in np.nditer(a, flags=['external_loop'], order='F'):
 假设数组 a 的维度为 3X4，数组 b 的维度为 1X4 ，
 则使用以下迭代器（数组 b 被广播到 a 的大小）。
 """
-
-
-
+a = np.arange(0, 60, 5).reshape(3, 4)
+print("a:\n")
+print(a)
+b = np.array([1, 2, 3, 4], dtype=int)
+print("b:")
+print(b)
+for x, y in np.nditer([a, b]):
+    print("%s:%s" % (x, y), end=", ")
 
 
 
