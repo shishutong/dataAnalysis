@@ -57,4 +57,4 @@ print(a)
 
 a = np.linspace(1, 10, 10, retstep=True)
 print(a)
-b =
+
